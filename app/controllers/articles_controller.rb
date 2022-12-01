@@ -17,4 +17,8 @@ class ArticlesController < ApplicationController
     render json: { error: "Article not found" }, status: :not_found
   end
 
+  def authorize
+    render json: { error: "Not authorized" }, status: :unauthorized
+  end
+
 end
